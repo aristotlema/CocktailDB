@@ -1,0 +1,27 @@
+// TODO - This is a temp fix, based on docs, should not matter that this isn't imported into App.scss 
+// If classes are not extended they will not be written into CSS
+@import '../styles/_scss-variables.scss';
+
+
+.search-bar {
+    width: 80vw;
+    margin: 2rem;
+
+    form .search-bar-input {
+        background-color: var(--color-light-gray-2);
+        width: 100%;
+        border: none;
+        padding: 10px 0 10px 20px;
+        border-radius: 25px;
+        font-weight: 300;
+        color: var(--color-text-light-gray);
+        outline: none;
+        box-shadow: var(--site-box-shadown);
+        &:hover{
+            @extend %shadow-and-hover;
+        }
+        &:focus{
+                @extend %shadow-and-hover;
+        }
+    }
+}

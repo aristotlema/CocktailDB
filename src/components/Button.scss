@@ -1,0 +1,14 @@
+.app-button{
+    background-color: inherit;
+    color: var(--color-bright-purple);
+    border: 2px solid var(--color-bright-purple);
+    border-radius: 15px;
+    font-size: 1.1rem;
+    padding: 4px 1.2rem 4px 1.2rem;
+    cursor: pointer;
+    
+    &:hover{
+        background-color: var(--color-bright-purple);
+        color: #fff;
+    }
+}
