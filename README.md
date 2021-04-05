@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## How do I run this project?
+
+clone into a directory and run `npm install` to install dependencies and then `npm start` to run the project
+
+## What is this project?
+
+Create React App consuming [https://www.thecocktaildb.com/](https://www.thecocktaildb.com/) for future portfolio use
+
 ## Available Scripts
 
 In the project directory, you can run:
