@@ -1,55 +1,70 @@
-// TODO - This is a temp fix, based on docs, should not matter that this isn't imported into App.scss 
+// TODO - This is a temp fix, based on docs, should not matter that this isn't imported into App.scss
 // If classes are not extended they will not be written into CSS
 @import '../styles/_scss-variables.scss';
- 
-section.drink-list{
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
 
-    .drink-list-card{
-        max-width: 40%;
-        background-color: var(--color-light-gray-2);
-        // box-shadow: var(--site-box-shadown);
-        box-shadow: 0 0 15px 0 rgba(0, 0, 0, .5);
-        margin-bottom: 2rem;
-        border-radius: 15px;
-        cursor: pointer;
-        &:hover{
-            @extend %shadow-and-hover;
-            // box-shadow: var(--site-box-shadow-hover);
-            // outline: var(--site-box-shadow-hover-border-util);
-        }
+section.drink-list {
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
 
-        .drink-list-card-image{
-            border-radius: 15px 15px 0 0;
-        }
-        .drink-list-card-body {
-            padding: 1.5rem;
-            .card-title{
-                color: var(--color-text-light-gray);
-            }
-            .card-drink-name {
-                font-weight: 600;
-                font-size: 1.5rem;
-                margin: 8px 0 12px 0;
-            }
-            .card-button{
-                background-color: var(--color-light-gray-2);
-                color: var(--color-bright-purple);
-                border: 2px solid var(--color-bright-purple);
-                border-radius: 15px;
-                font-size: 1.1rem;
-                padding: 4px 1.2rem 4px 1.2rem;
-                cursor: pointer;
-                
-                &:hover{
-                    background-color: var(--color-bright-purple);
-                    color: #fff;
-                }
-            }
-        }
-    }
+	.drink-list-card {
+		max-width: 80%;
+		background-color: var(--color-light-gray-2);
+		// box-shadow: var(--site-box-shadown);
+		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+		margin-bottom: 2rem;
+		border-radius: 15px;
+		cursor: pointer;
+		&:hover {
+			@extend %shadow-and-hover;
+			// box-shadow: var(--site-box-shadow-hover);
+			// outline: var(--site-box-shadow-hover-border-util);
+		}
+
+		.drink-list-card-image {
+			border-radius: 15px 15px 0 0;
+		}
+		.drink-list-card-body {
+			padding: 1.5rem;
+			.card-title {
+				color: var(--color-text-light-gray);
+			}
+			.card-drink-name {
+				font-weight: 600;
+				font-size: 1.5rem;
+				margin: 8px 0 12px 0;
+			}
+			.card-button {
+				background-color: var(--color-light-gray-2);
+				color: var(--color-bright-purple);
+				border: 2px solid var(--color-bright-purple);
+				border-radius: 15px;
+				font-size: 1.1rem;
+				padding: 4px 1.2rem 4px 1.2rem;
+				cursor: pointer;
+
+				&:hover {
+					background-color: var(--color-bright-purple);
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	section.drink-list div.drink-list-card {
+		max-width: 40%;
+	}
+}
+
+@media (min-width: 1025px) {
+	section.drink-list {
+		max-width: 1600px;
+	}
+	section.drink-list div.drink-list-card {
+		max-width: 30%;
+	}
 }
