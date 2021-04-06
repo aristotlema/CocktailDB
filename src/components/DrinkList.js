@@ -1,8 +1,9 @@
 import React from 'react';
 import './DrinkList.scss';
 import Link from './Link';
+import Spinner from './Spinner';
 
-const DrinkList = ({ cocktailResults, details }) => {
+const DrinkList = ({ cocktailResults, details, loading }) => {
 
     const loadDetails = (event, idDrink) => {
         event.preventDefault();
@@ -12,6 +13,8 @@ const DrinkList = ({ cocktailResults, details }) => {
     const isCocktailResults = () => {
         if(!cocktailResults) {
             return <h1>No results found</h1>;
+        } else if(loading){
+            return <Spinner />;
         } else if (cocktailResults.length > 0) {
             return cocktailResults.map(({ idDrink, strDrinkThumb, strDrink, strCategory }) => {
                 return (
