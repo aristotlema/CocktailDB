@@ -7,7 +7,7 @@ const SearchBar = ({ onFormSubmit }) => {
     const onSubmit = (event) => {
         event.preventDefault();
         onFormSubmit(term);
-    }
+    };
 
     return (
         <div className="search-bar">
@@ -22,7 +22,6 @@ const SearchBar = ({ onFormSubmit }) => {
             </form>
         </div>
     );
-
 };
 
 export default SearchBar;

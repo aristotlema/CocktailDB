@@ -3,11 +3,11 @@ import './DrinkList.scss';
 import Link from './Link';
 import Spinner from './Spinner';
 
-const DrinkList = ({ cocktailResults, details, loading }) => {
+const DrinkList = ({ cocktailResults, passDrinkID, loading }) => {
 
     const loadDetails = (event, idDrink) => {
         event.preventDefault();
-        details(idDrink);
+        passDrinkID(idDrink);
     };
     // Keep in one function for readability 
     const isCocktailResults = () => {
@@ -31,7 +31,7 @@ const DrinkList = ({ cocktailResults, details, loading }) => {
                 );
             });
         } else {
-            return <h1>Something went wrong</h1>;
+            return <h1>Something went wrong, try reloading the page</h1>;
         }
     };
 
