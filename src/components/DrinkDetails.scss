@@ -10,33 +10,44 @@ section.drink-details {
 
 	border-radius: 20px;
 	h1.drink-details-title {
+		font-family: var(--font-libre-slant);
 		margin-top: 1.5rem;
 		color: #fff;
 		font-size: 3rem;
 		font-weight: 600;
+		padding-bottom: 8px;
+		border-bottom: 3px solid var(--color-bright-purple);
 	}
-
-	.drink-details-image {
-		margin-top: 2rem;
-		img {
-			box-shadow: var(--site-box-shadown);
-		}
-	}
-
-	.drink-details-body {
-		margin: 2rem;
-		line-height: 2rem;
+	.drink-details-main {
 		display: flex;
 		flex-direction: column;
-		align-self: flex-start;
-		label.high-light {
-			padding: 2px;
-			background-color: var(--color-bright-purple);
-			border-radius: 5px;
-			margin-right: 15px;
+		align-items: center;
+
+		.drink-details-image {
+			margin-top: 2rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img {
+				box-shadow: var(--site-box-shadow);
+			}
 		}
-		.ingredients {
-			margin: 20px 0 20px 0;
+
+		.drink-details-body {
+			margin: 2rem;
+			line-height: 2rem;
+			display: flex;
+			flex-direction: column;
+			align-self: flex-start;
+			label.high-light {
+				padding: 2px;
+				background-color: var(--color-bright-purple);
+				border-radius: 5px;
+				margin-right: 15px;
+			}
+			.ingredients {
+				margin: 20px 0 20px 0;
+			}
 		}
 	}
 }
@@ -45,7 +56,21 @@ section.drink-details {
 	section.drink-details {
 		margin: 1rem;
 	}
-	section.drink-details .drink-details-body {
+	section.drink-details .drink-details-main .drink-details-body {
 		margin: 2rem 0 2rem 0;
+	}
+}
+
+@media (min-width: 1025px) {
+	section.drink-details .drink-details-main {
+		flex-direction: row;
+
+		.drink-details-image {
+			flex: 1;
+		}
+		.drink-details-body {
+			flex: 1;
+			align-self: center;
+		}
 	}
 }

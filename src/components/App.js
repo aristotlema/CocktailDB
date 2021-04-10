@@ -17,10 +17,10 @@ const App = () => {
     useEffect(() => {
         // If page is refreshed on details page, will set the ID drink allowing data to persist
         const currentPage = window.location.pathname;
-        if (currentPage.slice(0, -5) === "/details/"){
+        if (currentPage.slice(0, 9) === "/details/"){
             setCocktailID(currentPage.slice(9));
         }
-    }, [cocktailID]);
+    }, []);
 
 
     const passDrinkID = (id) => {

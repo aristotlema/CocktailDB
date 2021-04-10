@@ -16,7 +16,7 @@
 		font-weight: 300;
 		color: var(--color-text-light-gray);
 		outline: none;
-		box-shadow: var(--site-box-shadown);
+		box-shadow: var(--site-box-shadow);
 		&:hover {
 			@extend %shadow-and-hover;
 		}

@@ -48,19 +48,21 @@ const DrinkDetails = ({ cocktailID }) => {
                         <Button buttonTitle="Return Home"></Button>
                     </Link>
                     <h1 className="drink-details-title">{selectedCocktail.strDrink}</h1>
-                    <div className="drink-details-image">
-                        <img src={selectedCocktail.strDrinkThumb} alt={selectedCocktail.strDrink} />
-                    </div>
-                    <div className="drink-details-body">
-                        <div><label htmlFor="Name" className="high-light">Name: </label> {selectedCocktail.strDrink}</div>
-                        <div><label htmlFor="Category" className="high-light">Category: </label> {selectedCocktail.strCategory}</div>
-                        <div><label htmlFor="Info" className="high-light">Info: </label> {selectedCocktail.strAlcoholic}</div>
-                        <div><label htmlFor="Glass" className="high-light">Glass: </label> {selectedCocktail.strGlass}</div>
-                        <div><label htmlFor="Instructions" className="high-light">Instructions: </label> {selectedCocktail.strInstructions}</div>
-                        
-                        <h2 className="ingredients"><label htmlFor="ingredients" className="high-light">Ingredients </label></h2>
-                        <div>
-                            {renderIngredients()}
+                    <div className="drink-details-main">
+                        <div className="drink-details-image">
+                            <img src={selectedCocktail.strDrinkThumb} alt={selectedCocktail.strDrink} />
+                        </div>
+                        <div className="drink-details-body">
+                            <div><label htmlFor="Name" className="high-light">Name: </label> {selectedCocktail.strDrink}</div>
+                            <div><label htmlFor="Category" className="high-light">Category: </label> {selectedCocktail.strCategory}</div>
+                            <div><label htmlFor="Info" className="high-light">Info: </label> {selectedCocktail.strAlcoholic}</div>
+                            <div><label htmlFor="Glass" className="high-light">Glass: </label> {selectedCocktail.strGlass}</div>
+                            <div><label htmlFor="Instructions" className="high-light">Instructions: </label> {selectedCocktail.strInstructions}</div>
+                            
+                            <h2 className="ingredients"><label htmlFor="ingredients" className="high-light">Ingredients </label></h2>
+                            <div>
+                                {renderIngredients()}
+                            </div>
                         </div>
                     </div>
                 </section>
